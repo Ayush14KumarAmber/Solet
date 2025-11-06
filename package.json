@@ -1,0 +1,45 @@
+{
+  "name": "solet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Solet - Decentralized voting dApp smart contracts (Hardhat)",
+  "main": "index.js",
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage --testfiles 'tests/**/*.js'",
+    "lint": "echo 'No linter configured'",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:election:local": "hardhat run scripts/deploy-election.js --network hardhat",
+    "deploy:election:sepolia": "hardhat run scripts/deploy-election.js --network sepolia",
+    "verify": "node scripts/verify.js",
+    "abi:export": "node scripts/export-abi.js"
+  },
+  "keywords": [
+    "hardhat",
+    "solidity",
+    "voting",
+    "dapp",
+    "solet"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.5.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.10",
+    "solidity-coverage": "^0.8.12"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}

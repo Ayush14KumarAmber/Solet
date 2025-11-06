@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vote-active: #22c55e;
+  --vote-pending: #f59e0b;
+  --vote-ended: #6b7280;
+  --gradient-card: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+  --shadow-card: 0 10px 25px -10px rgba(99,102,241,0.4);
+}
+
+html, body, #root { height: 100%; }
+/* Use explicit CSS gradient to avoid PurgeCSS removing utility classes */
+body {
+  background: linear-gradient(180deg, #eef2ff 0%, #ede9fe 50%, #f5f3ff 100%);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-surface {
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-card);
+}
+
+.brand-gradient {
+  background-image: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.hover-lift:hover { transform: translateY(-2px); }
+
+

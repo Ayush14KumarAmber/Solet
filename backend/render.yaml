@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: solet-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MONGODB_URI
+        sync: false
+      - key: RPC_URL
+        sync: false
+      - key: FACTORY_ADDRESS
+        sync: false
+
